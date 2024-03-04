@@ -1,0 +1,6 @@
+[wokwi]
+version=1
+firmware='build/flasher_args.json'
+elf='build/i2c_oled.elf'
+gdbServerPort=3333
+

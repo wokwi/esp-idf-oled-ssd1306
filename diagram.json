@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Volodymyr Seleznov",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-c3-devkitm-1",
+      "id": "esp",
+      "top": -122.73,
+      "left": 65.54,
+      "attrs": {}
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": -107.34,
+      "left": -66.83,
+      "rotate": 180,
+      "attrs": { "i2cAddress": "0x3c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "oled1:SDA", "esp:3", "blue", [ "h-0.07", "v28.8", "h86.4", "v-64.83" ] ],
+    [ "esp:4", "oled1:SCL", "orange", [ "h14.66", "v55.23", "h-191.7" ] ],
+    [ "esp:GND.5", "oled1:GND", "black", [ "h0" ] ],
+    [ "esp:5V.2", "oled1:VCC", "red", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
